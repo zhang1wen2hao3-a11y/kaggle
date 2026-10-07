@@ -6,6 +6,7 @@
 | 目录 | 竞赛 | 指标 | 当前最佳 | 说明 |
 |---|---|---|---|---|
 | [`disaster-tweets/`](disaster-tweets/) | [Natural Language Processing with Disaster Tweets](https://www.kaggle.com/competitions/nlp-getting-started) | F1 | **public LB 0.83849**（rank 70/442） | TF-IDF 基线 → BERT 微调 → 模型融合 |
+| [`the-pokemon-company/`](the-pokemon-company/) | [The Pokémon Company - PTCG AI Battle Challenge Playground](https://www.kaggle.com/competitions/the-pokemon-company-ptcg-ai-battle-challenge-playground) | cabt_bo3 (Bo3 胜率) | 进行中 | 宝可梦集换式卡牌对战 agent（数据不入库，跑 `fetch_data.sh`） |
 
 ## 约定
 
