@@ -1,0 +1,31 @@
+# ==== 大文件：模型权重（4.7G）绝对不能进 git ====
+models/
+# 需要时用 ModelScope 重新拉取：
+#   python finetune_transformer.py --model microsoft/deberta-v3-base ...   # 会自动下载到 models/
+
+# ==== 运行产物 / 缓存 ====
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.egg-info/
+.pytest_cache/
+
+# ==== 日志（保留文本日志，忽略可能的临时文件）====
+*.tmp
+*.log.bak
+
+# ==== 凭据：永远不要提交 ====
+kaggle.json
+access_token
+.credentials*
+*.pem
+.env
+
+# ==== 如果你打算把仓库设为公开，取消下面两行注释以排除比赛数据与第三方 notebook ====
+# train.csv
+# test.csv
+# sample_submission.csv
+# kerasnlp-starter-notebook-disaster-tweets.ipynb
+# abb-ec20b1030.ipynb
+# transformers-based-nlp-model-2.ipynb
+# nlp-with-disaster-tweets-eda-cleaning-and-bert.ipynb

@@ -1,0 +1,127 @@
+设备: cuda (NVIDIA GeForce RTX 3050 Laptop GPU)
+train=(7613, 5) test=(3263, 4) 正类比例=0.4297  骨干=google-bert/bert-base-uncased
+准备 tokenizer/权重 …
+  从 ModelScope 下载: google-bert/bert-base-uncased …
+2026-10-07 14:18:31,482 | INFO    | modelscope_hub.download | Downloading 17 files from google-bert/bert-base-uncased@master
+Downloading:   0%|          | 0/17 [00:00<?, ?file/s]Downloading:  41%|████      | 7/17 [00:00<00:00, 23.47file/s]Downloading:  59%|█████▉    | 10/17 [00:00<00:00, 17.28file/s]Downloading:  88%|████████▊ | 15/17 [00:00<00:00, 18.62file/s]Downloading: 100%|██████████| 17/17 [00:00<00:00, 18.22file/s]Downloading: 100%|██████████| 17/17 [00:00<00:00, 18.66file/s]
+  已下载到: /home/zhang/code/kaggle/Natural Language Processing with Disaster Tweets/models/models/google-bert--bert-base-uncased/snapshots/master
+
+== seed42 fold1/5 ==
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  75%|███████▍  | 149/199 [00:00<00:00, 1487.28it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1631.56it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: /home/zhang/code/kaggle/Natural Language Processing with Disaster Tweets/models/models/google-bert--bert-base-uncased/snapshots/master
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+classifier.weight                          | MISSING    | 
+classifier.bias                            | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    fold1 ep1: loss=0.4943 val_F1=0.7903  (48s)
+    fold1 ep2: loss=0.3548 val_F1=0.8121  (49s)
+    fold1 ep3: loss=0.2805 val_F1=0.8141  (48s)
+
+== seed42 fold2/5 ==
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  26%|██▌       | 52/199 [00:00<00:00, 515.94it/s]Loading weights:  62%|██████▏   | 124/199 [00:00<00:00, 630.29it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 726.41it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: /home/zhang/code/kaggle/Natural Language Processing with Disaster Tweets/models/models/google-bert--bert-base-uncased/snapshots/master
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+classifier.weight                          | MISSING    | 
+classifier.bias                            | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    fold2 ep1: loss=0.4788 val_F1=0.7946  (48s)
+    fold2 ep2: loss=0.3385 val_F1=0.8000  (49s)
+    fold2 ep3: loss=0.2548 val_F1=0.8032  (48s)
+
+== seed42 fold3/5 ==
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  77%|███████▋  | 153/199 [00:00<00:00, 1521.56it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1565.66it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: /home/zhang/code/kaggle/Natural Language Processing with Disaster Tweets/models/models/google-bert--bert-base-uncased/snapshots/master
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+classifier.weight                          | MISSING    | 
+classifier.bias                            | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    fold3 ep1: loss=0.4683 val_F1=0.7918  (48s)
+    fold3 ep2: loss=0.3242 val_F1=0.7771  (49s)
+    fold3 ep3: loss=0.2375 val_F1=0.7853  (47s)
+    fold3 早停于 ep3（最佳 ep1 F1=0.7918）
+
+== seed42 fold4/5 ==
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  70%|██████▉   | 139/199 [00:00<00:00, 1388.59it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1559.09it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: /home/zhang/code/kaggle/Natural Language Processing with Disaster Tweets/models/models/google-bert--bert-base-uncased/snapshots/master
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+classifier.weight                          | MISSING    | 
+classifier.bias                            | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    fold4 ep1: loss=0.4801 val_F1=0.8114  (47s)
+    fold4 ep2: loss=0.3436 val_F1=0.8204  (49s)
+    fold4 ep3: loss=0.2617 val_F1=0.8193  (47s)
+
+== seed42 fold5/5 ==
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  70%|██████▉   | 139/199 [00:00<00:00, 1383.99it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1522.77it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: /home/zhang/code/kaggle/Natural Language Processing with Disaster Tweets/models/models/google-bert--bert-base-uncased/snapshots/master
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+classifier.weight                          | MISSING    | 
+classifier.bias                            | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    fold5 ep1: loss=0.4768 val_F1=0.7607  (48s)
+    fold5 ep2: loss=0.3380 val_F1=0.8063  (47s)
+    fold5 ep3: loss=0.2419 val_F1=0.8131  (47s)
+
+每折最佳 val F1: [0.8141, 0.8032, 0.7918, 0.8204, 0.8131]
+CV F1 = 0.8085 ± 0.0100
+OOF F1(@0.5) = 0.8086
+  阈值候选 top3: [(0.44, 0.8091), (0.45, 0.809), (0.51, 0.8089)]
+阈值搜索: thr=0.44 -> OOF F1=0.8091
+已写出 /home/zhang/code/kaggle/Natural Language Processing with Disaster Tweets/submissions/bert_base_v1.csv；测试集正类比例=0.4168
+OOF 已保存: oof/bert_base_v1.npy
+已写入实验记录: EXP-0003
